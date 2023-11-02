@@ -1,0 +1,21 @@
+@import "../var";
+
+.footer {
+  background: #000;
+
+  &__wrapper {
+    padding: 14px 0;
+  }
+
+  &__copyright {
+    margin: 0;
+  }
+
+  &__link {
+    color: #FFF !important;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    text-decoration-line: underline;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../var";
+
+.contacts {
+  background: #01070F;
+
+  &__wrapper {
+    padding: 75px 0;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    color: #FFF !important;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__text {
+    padding-left: 17px;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      padding: 25px 0;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+}

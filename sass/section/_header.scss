@@ -1,0 +1,42 @@
+@import "../var";
+
+.header {
+  background-color: #000;
+
+  &__wrapper {
+    padding: 24px 0;
+  }
+
+  &__collapse {
+    justify-content: end;
+    align-items: center;
+  }
+
+  &__navbar-list {
+    gap: 57px;
+  }
+
+  &__navlink {
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      padding: 10px 0;
+    }
+
+    &__navbar-list {
+      gap: 15px;
+    }
+
+    &__list-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../var";
+
+.feedback {
+  background: #000;
+
+  &__wrapper {
+    padding: 55px 0 100px;
+  }
+
+  &__title {
+    margin-bottom: 90px !important;
+  }
+  
+  &__card-wrapper {
+    padding: 20px 20px 25px 25px;
+    border-radius: 20px;
+    border: 1px solid #008DD2;
+    background: #FFF;
+    color: #0D0802;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__card-header {
+    margin-bottom: 17px;
+  }
+
+  &__card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__card-date {
+    background: linear-gradient(180deg, #008DD2 0%, #4E59A2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+  }
+
+  &__carousel-prev {
+    width: 30px;
+    height: 30px;
+    top: -45px !important;
+    left: 0 !important;
+  }
+
+  &__carousel-next {
+    width: 30px;
+    height: 30px;
+    top: -45px !important;
+    left: 50px !important;
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      padding: 25px 0;
+    }
+
+    &__title {
+      margin-bottom: 50px !important;
+    }
+  }
+}
