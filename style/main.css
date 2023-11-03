@@ -94,6 +94,15 @@
 .about-us__bg-2::after {
   content: url("../../image/bg_2.png");
 }
+.about-us__bg-3 {
+  position: absolute;
+  top: 350px;
+  left: -250px;
+  z-index: -1;
+}
+.about-us__bg-3::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='189' height='189' viewBox='0 0 189 189' fill='none'%3E%3Cpath d='M161 7L7 155L185 185L161 7Z' stroke='%23147FC5' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+}
 @media (max-width: 768px) {
   .about-us__wrapper {
     padding: 25px 0;
@@ -297,6 +306,11 @@ b {
   z-index: 5;
 }
 
+@media (max-width: 1200px) {
+  .animated {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   body {
     font-size: 14px;
