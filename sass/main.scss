@@ -35,6 +35,12 @@ b {
   max-width: 1210px;
 }
 
+.main {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 14px;
