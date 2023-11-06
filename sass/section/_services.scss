@@ -1,10 +1,32 @@
 @import "../var";
 
 .services {
-  background: #01070F;
+  background: #01070f;
 
   &__wrapper {
     padding: 90px 0 95px;
+  }
+
+  &__bg-1 {
+    position: absolute;
+    top: -110px;
+    right: -300px;
+    z-index: 5;
+  }
+
+  &__bg-1::after {
+    content: url("data:image/svg+xml,%3Csvg width='281' height='278' viewBox='0 0 281 278' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.333333 141C0.333333 146.891 5.10896 151.667 11 151.667C16.891 151.667 21.6667 146.891 21.6667 141C21.6667 135.109 16.891 130.333 11 130.333C5.10896 130.333 0.333333 135.109 0.333333 141ZM152.333 11C152.333 16.891 157.109 21.6667 163 21.6667C168.891 21.6667 173.667 16.891 173.667 11C173.667 5.10896 168.891 0.333333 163 0.333333C157.109 0.333333 152.333 5.10896 152.333 11ZM209 204L208.394 205.906L211.766 206.979L210.946 203.536L209 204ZM10.3936 142.906L208.394 205.906L209.606 202.094L11.6064 139.094L10.3936 142.906ZM210.946 203.536L164.946 10.5363L161.054 11.4637L207.054 204.464L210.946 203.536Z' fill='url(%23paint0_linear_1_154)'/%3E%3Cpath d='M279 22L27 276H279V22Z' stroke='%23147FC5' stroke-width='4' stroke-linecap='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_154' x1='110' y1='11' x2='110' y2='204' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23008DD2'/%3E%3Cstop offset='1' stop-color='%234E59A2'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  }
+
+  &__bg-2 {
+    position: absolute;
+    top: 320px;
+    left: -290px;
+    z-index: 5;
+  }
+
+  &__bg-2::after {
+    content: url("data:image/svg+xml,%3Csvg width='249' height='405' viewBox='0 0 249 405' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 30L164 2L36 398V30Z' stroke='%23147FC5' stroke-width='2'/%3E%3Cpath d='M190 262L6 92H246L190 262Z' stroke='url(%23paint0_linear_1_150)' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M25.3333 394C25.3333 399.891 30.109 404.667 36 404.667C41.891 404.667 46.6667 399.891 46.6667 394C46.6667 388.109 41.891 383.333 36 383.333C30.109 383.333 25.3333 388.109 25.3333 394ZM177.333 264C177.333 269.891 182.109 274.667 188 274.667C193.891 274.667 198.667 269.891 198.667 264C198.667 258.109 193.891 253.333 188 253.333C182.109 253.333 177.333 258.109 177.333 264ZM37.2999 395.52L189.3 265.52L186.7 262.48L34.7001 392.48L37.2999 395.52Z' fill='url(%23paint1_linear_1_150)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_150' x1='126' y1='92' x2='126' y2='262' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23008DD2'/%3E%3Cstop offset='1' stop-color='%234E59A2'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_1_150' x1='112' y1='264' x2='112' y2='394' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23008DD2'/%3E%3Cstop offset='1' stop-color='%234E59A2'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
   }
 
   &__title {
@@ -12,7 +34,9 @@
   }
 
   &__list {
-    counter-reset: item; 
+    position: relative;
+    z-index: 6;
+    counter-reset: item;
     list-style: none;
     padding-left: 0;
   }
@@ -30,7 +54,7 @@
     top: 50%;
     z-index: 5;
     transform: translate(-50%, -50%);
-    background: linear-gradient(180deg, #008DD2 0%, #4E59A2 100%);
+    background: linear-gradient(180deg, #008dd2 0%, #4e59a2 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -41,15 +65,27 @@
 
   &__item-wrapper {
     position: relative;
-    padding: 0 20px 0 60px;
+    padding: 10px 20px 10px 60px;
     display: flex;
     align-items: center;
     min-height: 93px;
     height: 100%;
     border-radius: 21px;
-    border: 1px solid #147FC5;
-    background: #01070F;
-    box-shadow: 0px 0px 18px 0px #000, 0px 0px 15px 0px #147FC5, 0px 0px 10px 0px rgba(255, 255, 255, 0.25);
+    border: 1px solid #147fc5;
+    background: #01070f;
+    box-shadow:
+      0px 0px 18px 0px #000,
+      0px 0px 5px 0px #147fc5,
+      0px 0px 10px 0px rgba(255, 255, 255, 0.25);
+    transition: box-shadow 1s ease-in-out;
+  }
+
+  &__item-wrapper:hover,
+  &__item-wrapper:focus {
+    box-shadow:
+      0px 0px 18px 0px #000,
+      0px 0px 20px 0px #147fc5,
+      0px 0px 10px 0px rgba(255, 255, 255, 0.25);
   }
 
   @media (max-width: 768px) {

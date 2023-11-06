@@ -15,18 +15,19 @@
     />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="style/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="style/itc-slider.css">
     <link rel="stylesheet" href="style/main.min.css" />
     <title>ETHNICA IT</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header fixed-top">
         <div class="header__wrapper">
           <nav class="header__navbar navbar navbar-expand-md">
             <div class="container">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand m-0 p-0" href="#">
                 <img
                   src="image/logo.png"
                   alt="logo"
@@ -34,27 +35,16 @@
                 />
               </a>
               <button
-                class="navbar-toggler d-md-none"
+                class="header__burger-icon navbar-toggler d-md-none"
+                id="burgerButton"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#header__navbar"
                 aria-controls="header__navbar"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25  "
-                  fill="white"
-                  class="bi bi-list-nested"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"
-                  />
-                </svg>
+              >                
+                
               </button>
               <div
                 class="header__collapse collapse navbar-collapse"
@@ -62,16 +52,16 @@
               >
                 <ul class="header__navbar-list navbar-nav">
                   <li class="header__list-item nav-item">
-                    <a class="header__navlink" href="#">О нас</a>
+                    <a class="header__navlink" href="#about-us">О нас</a>
                   </li>
                   <li class="header__list-item nav-item">
-                    <a class="header__navlink" href="#">Услуги</a>
+                    <a class="header__navlink" href="#services">Услуги</a>
                   </li>
                   <li class="header__list-item nav-item">
-                    <a class="header__navlink" href="#">Отзывы</a>
+                    <a class="header__navlink" href="#feedback">Отзывы</a>
                   </li>
                   <li class="header__list-item nav-item">
-                    <a class="header__navlink" href="#">Контакты</a>
+                    <a class="header__navlink" href="#contacts">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -82,22 +72,18 @@
       <main class="main">
         <section class="intro">
           <div class="intro__wrapper">
-            <img
-              src="image/intro_img.png"
-              alt=""
-              class="intro__img img-fluid"
-            />
+            <video class="intro__video img-fluid" src="image/abstract_line.mp4" autoplay loop muted></video>
           </div>
         </section>
-        <section class="about-us">
-          <div class="about-us__wrapper">
+        <section class="about-us--1" id="about-us">
+          <div class="about-us--1__wrapper">
             <div class="container">
               <div class="row">
                 <div
-                  class="col-md about-us__textbox d-flex flex-column justify-content-center"
+                  class="col-md p-md-0 ps-md-2 ps-xl-0 about-us--1__textbox d-flex flex-column justify-content-center"
                 >
-                  <h1 class="about-us__title">о нас</h1>
-                  <p class="about-us__text about-us__right">
+                  <h1 class="about-us--1__title">о нас</h1>
+                  <p class="about-us--1__text about-us--1__right">
                     <b>Системное администрирование —</b> ваш ключ к безопасности
                     и эффективности. <br /><br />
                     <b>Мы — ИТ компания,</b> специализирующаяся на
@@ -114,28 +100,34 @@
                     резервное копирование данных, мониторинг системы и многое
                     другое.
                   </p>
-                  <div class="about-us__bg-1 animated"></div>
+                  <div class="about-us--1__bg-1 animated"></div>
                 </div>
-                <div class="col-md">
+                <div class="col-md p-md-0 pe-md-2 pe-xl-0 d-flex flex-column justify-content-center">
                   <img
                     src="image/about_us-1.jpg"
                     alt=""
-                    class="about-us__img img-fluid"
+                    class="about-us--1__img img-fluid"
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-us--2">
+          <div class="about-us--2__wrapper">
+            <div class="container">
               <div class="row flex-md-row flex-column-reverse">
-                <div class="col-md">
+                <div class="col-md p-md-0 ps-md-2 ps-xl-0 d-flex flex-column justify-content-center">
                   <img
                     src="image/about_us-2.jpg"
                     alt=""
-                    class="about-us__img img-fluid"
+                    class="about-us--2__img img-fluid"
                   />
                 </div>
                 <div
-                  class="col-md about-us__textbox d-flex flex-column justify-content-center"
+                  class="col-md p-md-0 pe-md-2 pe-xl-0 about-us--2__textbox d-flex flex-column justify-content-center"
                 >
-                  <p class="about-us__text about-us__left">
+                  <p class="about-us--2__text about-us--2__left">
                     <b>Мы предлагаем широкий спектр услуг,</b> включая установку
                     и настройку серверов, обслуживание сетевого оборудования,
                     резервное копирование данных, мониторинг системы и многое
@@ -144,14 +136,20 @@
                     инфраструктуры, чтобы вы могли сосредоточиться на развитии
                     своего бизнеса.
                   </p>
-                  <div class="about-us__bg-2 animated"></div>
+                  <div class="about-us--2__bg-2 animated"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-us--3">
+          <div class="about-us--3__wrapper">
+            <div class="container">
               <div class="row">
                 <div
-                  class="col-md about-us__textbox d-flex flex-column justify-content-center"
+                  class="col-md p-md-0 ps-md-2 ps-xl-0 about-us--3__textbox d-flex flex-column justify-content-center"
                 >
-                  <p class="about-us__text about-us__right">
+                  <p class="about-us--3__text about-us--3__right">
                     С нами
                     <b
                       >вы можете быть уверены в надежности и безопасности вашей
@@ -166,22 +164,24 @@
                     данных. Развивайтесь с нами и достигайте новых высот в своем
                     бизнесе!
                   </p>
-                  <div class="about-us__bg-3 animated"></div>
+                  <div class="about-us--3__bg-3 animated"></div>
                 </div>
-                <div class="col-md">
+                <div class="col-md p-md-0 pe-md-2 pe-xl-0 d-flex flex-column justify-content-center">
                   <img
                     src="image/about_us-3.jpg"
                     alt=""
-                    class="about-us__img img-fluid"
+                    class="about-us--3__img img-fluid"
                   />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
           <div class="services__wrapper">
             <div class="container">
+              <div class="services__bg-1 animated"></div>
+              <div class="services__bg-2 animated"></div>
               <h1 class="services__title">Услуги</h1>
               <ul class="services__list row">
                 <li class="services__list-item col-md-6">
@@ -265,19 +265,17 @@
             </div>
           </div>
         </section>
-        <section class="feedback">
+        <section class="feedback" id="feedback">
           <div class="feedback__wrapper">
             <div class="container">
-              <h1 class="feedback__title">отзывы</h1>
-              <div
-                id="feedback_carousel"
-                class="carousel slide carousel-fade"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active">
-                    <div class="row">
-                      <div class="feedback__card col-md-4 mb-3 mb-md-0">
+              <div class="feedback__bg-1 animated"></div>
+              <div class="feedback__bg-2 animated"></div>
+              <h1 class="feedback__title">отзывы</h1> 
+              <div class="itc-slider" data-slider="itc-slider" data-loop="true">
+                <div class="itc-slider-wrapper">
+                  <div class="itc-slider-items">
+                    <div class="itc-slider-item">
+                      <div class="feedback__card mb-3 mb-md-0">
                         <div class="feedback__card-wrapper">
                           <div class="feedback__card-header row">
                             <div class="col-3 d-flex align-items-center">
@@ -367,7 +365,9 @@
                           </p>
                         </div>
                       </div>
-                      <div class="feedback__card col-md-4 mb-3 mb-md-0">
+                    </div>
+                    <div class="itc-slider-item">
+                      <div class="feedback__card mb-3 mb-md-0">
                         <div class="feedback__card-wrapper">
                           <div class="feedback__card-header row">
                             <div class="col-3 d-flex align-items-center">
@@ -457,7 +457,9 @@
                           </p>
                         </div>
                       </div>
-                      <div class="feedback__card col-md-4 mb-3 mb-md-0">
+                    </div>
+                    <div class="itc-slider-item">
+                      <div class="feedback__card mb-3 mb-md-0">
                         <div class="feedback__card-wrapper">
                           <div class="feedback__card-header row">
                             <div class="col-3 d-flex align-items-center">
@@ -548,100 +550,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row">
-                      <div class="feedback__card col-md-4 mb-3 mb-md-0">
-                        <div class="feedback__card-wrapper">
-                          <div class="feedback__card-header row">
-                            <div class="col-3 d-flex align-items-center">
-                              <img
-                                src="image/ya.png"
-                                alt="Yandex"
-                                class="feedback__card-img img-fluid"
-                              />
-                            </div>
-                            <div class="col-9">
-                              <h3 class="feedback__card-title">Марина</h3>
-                              <p class="feedback__card-date">21.12.2021</p>
-                              <div class="feedback__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                >
-                                  <path
-                                    d="M13.0472 14.9558C12.514 15.3356 9.09313 12.9283 8.43796 12.9231C7.7828 12.9178 4.32338 15.2697 3.79645 14.8814C3.26951 14.4931 4.50831 10.505 4.31089 9.88206C4.11345 9.2591 0.801316 6.70512 1.0088 6.08541C1.21629 5.46571 5.40282 5.40815 5.93597 5.02841C6.46911 4.64867 7.88152 0.718367 8.53668 0.723638C9.19185 0.72891 10.5405 4.68143 11.0674 5.0697C11.5943 5.45797 15.7794 5.5829 15.9768 6.20585C16.1742 6.82881 12.8212 9.32917 12.6137 9.94887C12.4062 10.5686 13.5803 14.5761 13.0472 14.9558Z"
-                                    fill="#F8B84E"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                >
-                                  <path
-                                    d="M13.0472 14.9558C12.514 15.3356 9.09313 12.9283 8.43796 12.9231C7.7828 12.9178 4.32338 15.2697 3.79645 14.8814C3.26951 14.4931 4.50831 10.505 4.31089 9.88206C4.11345 9.2591 0.801316 6.70512 1.0088 6.08541C1.21629 5.46571 5.40282 5.40815 5.93597 5.02841C6.46911 4.64867 7.88152 0.718367 8.53668 0.723638C9.19185 0.72891 10.5405 4.68143 11.0674 5.0697C11.5943 5.45797 15.7794 5.5829 15.9768 6.20585C16.1742 6.82881 12.8212 9.32917 12.6137 9.94887C12.4062 10.5686 13.5803 14.5761 13.0472 14.9558Z"
-                                    fill="#F8B84E"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                >
-                                  <path
-                                    d="M13.0472 14.9558C12.514 15.3356 9.09313 12.9283 8.43796 12.9231C7.7828 12.9178 4.32338 15.2697 3.79645 14.8814C3.26951 14.4931 4.50831 10.505 4.31089 9.88206C4.11345 9.2591 0.801316 6.70512 1.0088 6.08541C1.21629 5.46571 5.40282 5.40815 5.93597 5.02841C6.46911 4.64867 7.88152 0.718367 8.53668 0.723638C9.19185 0.72891 10.5405 4.68143 11.0674 5.0697C11.5943 5.45797 15.7794 5.5829 15.9768 6.20585C16.1742 6.82881 12.8212 9.32917 12.6137 9.94887C12.4062 10.5686 13.5803 14.5761 13.0472 14.9558Z"
-                                    fill="#F8B84E"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                >
-                                  <path
-                                    d="M13.0472 14.9558C12.514 15.3356 9.09313 12.9283 8.43796 12.9231C7.7828 12.9178 4.32338 15.2697 3.79645 14.8814C3.26951 14.4931 4.50831 10.505 4.31089 9.88206C4.11345 9.2591 0.801316 6.70512 1.0088 6.08541C1.21629 5.46571 5.40282 5.40815 5.93597 5.02841C6.46911 4.64867 7.88152 0.718367 8.53668 0.723638C9.19185 0.72891 10.5405 4.68143 11.0674 5.0697C11.5943 5.45797 15.7794 5.5829 15.9768 6.20585C16.1742 6.82881 12.8212 9.32917 12.6137 9.94887C12.4062 10.5686 13.5803 14.5761 13.0472 14.9558Z"
-                                    fill="#F8B84E"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                >
-                                  <path
-                                    d="M13.0472 14.9558C12.514 15.3356 9.09313 12.9283 8.43796 12.9231C7.7828 12.9178 4.32338 15.2697 3.79645 14.8814C3.26951 14.4931 4.50831 10.505 4.31089 9.88206C4.11345 9.2591 0.801316 6.70512 1.0088 6.08541C1.21629 5.46571 5.40282 5.40815 5.93597 5.02841C6.46911 4.64867 7.88152 0.718367 8.53668 0.723638C9.19185 0.72891 10.5405 4.68143 11.0674 5.0697C11.5943 5.45797 15.7794 5.5829 15.9768 6.20585C16.1742 6.82881 12.8212 9.32917 12.6137 9.94887C12.4062 10.5686 13.5803 14.5761 13.0472 14.9558Z"
-                                    fill="#F8B84E"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                          <p class="feedback__card-text">
-                            Идейные соображения высшего порядка, а также базовый
-                            вектор развития является качественно новой ступенью
-                            новых принципов формирования материально-технической
-                            и кадровой базы. Противоположная точка зрения
-                            подразумевает, что сделанные на базе
-                            интернет-аналитики выводы являются только методом
-                            политического участия и рассмотрены исключительно в
-                            разрезе маркетинговых и финансовых предпосылок. Наше
-                            дело не так однозначно, как может показаться.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="feedback__card col-md-4 mb-3 mb-md-0">
+                    <div class="itc-slider-item">
+                      <div class="feedback__card mb-3 mb-md-0">
                         <div class="feedback__card-wrapper">
                           <div class="feedback__card-header row">
                             <div class="col-3 d-flex align-items-center">
@@ -731,7 +641,9 @@
                           </p>
                         </div>
                       </div>
-                      <div class="feedback__card col-md-4 mb-3 mb-md-0">
+                    </div>
+                    <div class="itc-slider-item">
+                      <div class="feedback__card mb-3 mb-md-0">
                         <div class="feedback__card-wrapper">
                           <div class="feedback__card-header row">
                             <div class="col-3 d-flex align-items-center">
@@ -742,7 +654,7 @@
                               />
                             </div>
                             <div class="col-9">
-                              <h3 class="feedback__card-title">Александр</h3>
+                              <h3 class="feedback__card-title">Марина</h3>
                               <p class="feedback__card-date">21.12.2021</p>
                               <div class="feedback__stars">
                                 <svg
@@ -824,79 +736,17 @@
                     </div>
                   </div>
                 </div>
-                <button
-                  class="feedback__carousel-prev carousel-control-prev"
-                  type="button"
-                  data-bs-target="#feedback_carousel"
-                  data-bs-slide="prev"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                  >
-                    <path
-                      d="M10.625 16L17.75 23C18.25 23.5 19 23.5 19.5 23C20 22.5 20 21.75 19.5 21.25L13.375 15L19.5 8.75C20 8.25 20 7.5 19.5 7C19.25 6.75 19 6.625 18.625 6.625C18.25 6.625 18 6.75 17.75 7L10.625 14C10.125 14.625 10.125 15.375 10.625 16C10.625 15.875 10.625 15.875 10.625 16Z"
-                      fill="url(#paint0_linear_1_94)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_1_94"
-                        x1="15.0625"
-                        y1="6.625"
-                        x2="15.0625"
-                        y2="23.375"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#008DD2" />
-                        <stop offset="1" stop-color="#4E59A2" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="feedback__carousel-next carousel-control-next"
-                  type="button"
-                  data-bs-target="#feedback_carousel"
-                  data-bs-slide="next"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                  >
-                    <path
-                      d="M19.375 14L12.25 7C11.75 6.5 11 6.5 10.5 7C10 7.5 10 8.25 10.5 8.75L16.625 15L10.5 21.25C10 21.75 10 22.5 10.5 23C10.75 23.25 11 23.375 11.375 23.375C11.75 23.375 12 23.25 12.25 23L19.375 16C19.875 15.375 19.875 14.625 19.375 14C19.375 14.125 19.375 14.125 19.375 14Z"
-                      fill="url(#paint0_linear_1_96)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_1_96"
-                        x1="14.9375"
-                        y1="23.375"
-                        x2="14.9375"
-                        y2="6.625"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#008DD2" />
-                        <stop offset="1" stop-color="#4E59A2" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                <button class="feedback__carousel-prev itc-slider-btn itc-slider-btn-prev p-0"></button>
+                <button class="feedback__carousel-next itc-slider-btn itc-slider-btn-next p-0"></button>
               </div>
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__wrapper">
             <div class="container">
+              <div class="contacts__bg-1 animated"></div>
               <h1 class="contacts__title">Контакты</h1>
               <div class="row">
                 <div class="col-md-4">
@@ -938,7 +788,8 @@
                 </div>
                 <div class="col-md-4">
                   <a
-                    href="t.me/ethnica_it"
+                    href="https://t.me/ethnica_it"
+                    target="_blank"
                     class="contacts__link d-flex align-items-center mb-3 mb-md-0"
                   >
                     <svg
@@ -971,7 +822,8 @@
                 </div>
                 <div class="col-md-4">
                   <a
-                    href="vk.com/ethnica_it"
+                    href="https://vk.com/ethnica_it"
+                    target="_blank"
                     class="contacts__link d-flex align-items-center mb-3 mb-md-0"
                   >
                     <svg
@@ -1033,8 +885,9 @@
         </div>
       </footer>
     </div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/itc-slider.js"></script>
     <script src="js/animated.js"></script>
+    <script src="js/navbar-icon.js"></script>
   </body>
 </html>
