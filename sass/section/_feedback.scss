@@ -1,5 +1,3 @@
-@import "../var";
-
 .feedback {
   background: #000;
 
@@ -9,7 +7,7 @@
 
   &__bg-1 {
     position: absolute;
-    top: -150px;
+    top: -180px;
     right: -300px;
     z-index: 5;
   }

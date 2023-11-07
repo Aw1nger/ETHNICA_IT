@@ -1,5 +1,3 @@
-@import "../var";
-
 .about-us--1 {
   background: #01070f;
   position: relative;
@@ -60,12 +58,9 @@
 
   &__bg-2 {
     position: absolute;
-    right: -250px;
+    right: 135px;
+    top: -110px;
     z-index: -1;
-  }
-
-  &__bg-2::after {
-    content: url("../../image/bg_2.png");
   }
 
   @media (max-width: 768px) {
