@@ -49,7 +49,7 @@
   }
   svg:nth-child(2) {
     fill: $fillHighlight1;
-    left: ($left - 2) + px;
+    left: ($left - 3) + px;
     animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
   }
   svg:nth-child(3) {
@@ -78,7 +78,8 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-b {
+b,
+strong {
   font-size: 20px;
   font-weight: 700;
 }
@@ -110,12 +111,37 @@ b {
 }
 
 .glitch-1 {
-  @include svgGlitch("bg-1", 30, white, transparent, red, blue, 219, 254, 200, 175);
+  @include svgGlitch("bg-1", 7, transparent, transparent, red, blue, 219, 254, 0, 0);
 }
 
 .glitch-2 {
-  @include svgGlitch("bg-2", 30, white, transparent, red, blue, 153, 177, 200, 175);
+  @include svgGlitch("bg-2", 5, transparent, transparent, red, blue, 153, 177, 0, 0);
 }
+
+.glitch-3 {
+  @include svgGlitch("bg-3", 5, transparent, transparent, transparent, transparent, 187, 274, 0, 0);
+}
+
+.glitch-4 {
+  @include svgGlitch("bg-4", 7, transparent, transparent, transparent, transparent, 189, 189, 0, 0);
+}
+
+.glitch-5 {
+  @include svgGlitch("bg-5", 7, transparent, transparent, transparent, transparent, 249, 405, 0, 0);
+}
+
+.glitch-6 {
+  @include svgGlitch("bg-6", 7, transparent, transparent, transparent, transparent, 281, 278, 0, 0);
+}
+
+.glitch-7 {
+  @include svgGlitch("bg-7", 7, transparent, transparent, transparent, transparent, 384, 261, 0, 0);
+}
+
+.glitch-8 {
+  @include svgGlitch("bg-8", 7, transparent, transparent, transparent, transparent, 112, 121, 0, 0);
+}
+
 
 @media (max-width: 1200px) {
   .animated,
@@ -133,7 +159,8 @@ b {
     font-size: 32px;
   }
 
-  b {
+  b,
+  strong {
     font-size: 16px;
   }
 }
