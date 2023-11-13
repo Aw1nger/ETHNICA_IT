@@ -1,0 +1,43 @@
+.callback {
+  &__modal {
+    background: #01070F !important;
+  }
+
+  &__header {
+    border-bottom: 1px solid #008dd2;
+  }
+  
+  &__footer {
+    border-top: 1px solid #008dd2;
+  }
+
+  &__close-btn {
+    border: 1px solid #008dd2;
+    color: #888;
+  }
+
+  &__close-btn:hover,
+  &__close-btn:focus {
+    color: #CCC;
+    border: 1px solid #008dd2;
+  }
+
+  &__apply-btn {
+    border: 1px solid #008dd2;
+    color: #fff;
+    box-shadow:
+      0px 0px 18px 0px #000,
+      0px 0px 5px 0px #147fc5,
+      0px 0px 10px 0px rgba(255, 255, 255, 0.25);
+    transition: box-shadow 1s ease-in-out;
+  }
+
+  &__apply-btn:hover,
+  &__apply-btn:focus {
+    border: 1px solid #008dd2;
+    box-shadow:
+      0px 0px 18px 0px #000,
+      0px 0px 14px 0px #147fc5,
+      0px 0px 10px 0px rgba(255, 255, 255, 0.25);
+  }
+}
