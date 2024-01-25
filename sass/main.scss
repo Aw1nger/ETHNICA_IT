@@ -1,4 +1,5 @@
 @import "section/header";
+@import "section/callback";
 @import "section/intro";
 @import "section/about-us";
 @import "section/services";
@@ -108,6 +109,10 @@ strong {
   position: relative;
   overflow: hidden;
   z-index: 5;
+}
+
+.btn-close {
+  color: #fff !important;
 }
 
 .glitch-1 {
