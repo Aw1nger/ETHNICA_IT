@@ -1,6 +1,10 @@
 .feedback {
   background: #000;
 
+  &__card {
+    height: 100%;
+  }
+
   &__wrapper {
     padding: 55px 0 100px;
   }
@@ -32,6 +36,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
+    height: 100%;
   }
 
   &__card-header {
